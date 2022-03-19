@@ -6,8 +6,28 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Canvas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="canvas"></div>
 
+
+    <script>
+        canvas.onclick=(e)=>{
+            const x = e.clientX
+            const y = e.clientY
+            let div = document.createElement('div')
+            div.style.position = 'absolute'
+            div.style.left = x +'px'
+            div.style.top = y +'px'
+            div.style.width = '6px'
+            div.style.height = '6px'
+            div.style.marginLeft = '-3px'
+            div.style.marginTop = '-3px'
+            div.style.borderRadius = '50%'
+            div.style.backgroundColor = 'black'
+            canvas.append(div)
+        }
+    </script>
 </body>
 </html>
