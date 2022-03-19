@@ -18,8 +18,9 @@
     // 画线
     let ctx = canvas.getContext("2d");
     ctx.fillStyle = "rgb(200,0,0)"
-    ctx.fillRect(10, 10, 55, 50);
-
+    canvas.onmousemove = (e) => {
+        ctx.fillRect(e.clientX - 5, e.clientY - 5, 10, 10);
+    }
 
 </script>
 </body>
